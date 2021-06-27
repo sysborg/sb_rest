@@ -1,0 +1,23 @@
+#Disable directory's file list
+Options -Indexes
+
+#Disable access from .htaccess files
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
+
+#Disable access from certain type of files to protect system
+<FilesMatch "\.(json|sql)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+#Any directory or file that doesn't exists will redirect to SB Rest access controller | this will help with friendly URI
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ./sbrest.php [L]
+</IfModule>
