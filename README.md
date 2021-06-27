@@ -1,8 +1,8 @@
 Sysborg Rest - SBRest
 Sysborg's rest controllers and enviroments.
 
-Rest is something really amazing, but has alot of rules and threatments because of it we are doing a opensource to help anyone who needs an enviroment on 
-PHP to deal with Rest.
+Rest is something really amazing, but has alot of rules and threatments because of it we are doing a opensource to help 
+anyone who needs an enviroment on PHP to deal with Rest.
 
 Full OO Sysborg Rest is flexible and realiable.
 
