@@ -1,0 +1,14 @@
+#Disable directory's file list
+Options -Indexes
+
+#Disable access from .htaccess files
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
+
+#Disable access from certain type of files to protect system
+<FilesMatch "\.(json|sql)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
