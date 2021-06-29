@@ -1,0 +1,73 @@
+1xx - Information - Communicates transfer protocol-level information
+100 - Continue
+101 - Switching Protocols
+102 - Processing
+
+2xx - Success - Indicates that the client's request was accepted successfully
+200 - Ok - nonspecific success "do not use to return an error specification at the body"
+201 - Created - successfull resource creation
+202 - Accepted - successful start of an asynchronous action
+204 - No Content - should be used when the response body is intentionally empty
+205 - Reset Content
+206 - Partial Content
+207 - Multi-Status
+208 - Already Reported
+226 - IM Used
+
+3xx - Redirection - Indicates that the client must take some additional action in order to complete the request
+301 - Moved permanently - Should be used to relocate resources
+302 - Found - should not be used
+303 - See other - should be used to refer the client to a different URI
+304 - Not modified - should be used to preserve bandwidth
+307 - Temporary redirect - should be used to tell clients to resubmit the request to another URI
+308 - Permanent Redirect
+
+4xx - Client error - This category of error status codes points the finger at clients
+400 - Bad Request - may be used to indicate nonspecific failure
+401 - Unauthorized - must be used when tere is a problem with the client's credential
+402 - Payment Required
+403 - Forbidden - should be used to forbid access regardless of authorization state
+404 - not found - must be used when a client's UIR cannot be mapped to a resource
+405 - Method not allowed - must be used when the http method is not supported{
+  when request method are not supported.
+  required an allow header 
+  Allow: Get, Post for example
+}
+406 - Not acceptable - must be used when the requested media type cannot be served
+407 - Proxy Authentication Required
+408 - Request Timeout
+409 - Conflict - should be used to indicate a violation of resource state
+410 - Gone
+411 - Length Required
+412 - Precondition failed - should be used to support conditional operations
+413 - Payload Too Large
+414 - Request-URI Too Long
+415 - Unsupported media type - must be used when the media type of a request's payload cannot be processed
+416 - Requested Range Not Satisfiable
+417 - Expectation Failed
+418 - I'm a teapot
+421 - Misdirected Request
+422 - Unprocessable Entity
+423 - Locked
+424 - Failed Dependency
+426 - Upgrade Required
+428 - Precondition Required
+429 - Too Many Requests
+431 - Request Header Fields Too Large
+444 - Connection Closed Without Response
+451 - Unavailable For Legal Reasons
+499 - Client Closed Request
+
+5xx - Server Error - The server takes responsibility for these error status code
+500 - internal server error - should be used to indicate API malfunction
+501 - Not Implemented
+502 - Bad Gateway
+503 - Service Unavailable
+504 - Gateway Timeout
+505 - HTTP Version Not Supported
+506 - Variant Also Negotiates
+507 - Insufficient Storage
+508 - Loop Detected
+510 - Not Extended
+511 - Network Authentication Required
+599 - Network Connect Timeout Error
